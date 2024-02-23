@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# gcp
+service-account-file.json
+
 # C extensions
 *.so
 
