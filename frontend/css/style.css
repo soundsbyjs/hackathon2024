@@ -1,0 +1,186 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; /* Set background to white */
+    color: #313244; /* Base (dark color for contrast) */
+}
+
+nav {
+    background-color: #1e1e2e; /* Base (dark navy) */
+    color: #cdd6f4; /* Text (light color for contrast) */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f5e0dc; /* Rosewater */
+}
+
+.nav-links a {
+    margin-left: 20px;
+    color: #cdd6f4; /* Text */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f5e0dc; /* Rosewater */
+}
+
+.login-button {
+    background-color: #cba6f7; /* Mauve */
+    color: #ffffff; /* White */
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #b4befe; /* Lavender */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #1e1e2e; /* Base (dark navy) */
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto 20px; /* Center sections */
+}
+
+footer {
+    background-color: #89b4fa; /* Blue */
+    color: #f5e0dc; /* Rosewater */
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+}
+
+.login-form {
+    background: #fff; /* Dark background for the form */
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-form h2 {
+    color: #fff;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #cdd6f4; /* Lighter text for labels */
+    margin-bottom: 8px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #313a55; /* Slightly lighter navy for input backgrounds */
+    color: #fff; /* White text for inputs */
+}
+
+.form-group .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.form-group .remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.form-group .remember-me input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.form-group .remember-me label {
+    color: #cdd6f4; /* Lighter text for 'Remember me' label */
+}
+
+.form-group .forgot-password {
+    color: #cdd6f4; /* Lighter text for 'Forgot password?' link */
+    text-decoration: none;
+}
+
+.form-group .forgot-password:hover {
+    text-decoration: underline;
+}
+
+.form-group button.login-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #7f5af0; /* Purple button */
+    color: #fff; /* White text for button */
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.form-group button.login-button:hover {
+    background-color: #6246ea; /* Darker purple for hover effect */
+}
+
+.sign-up-link {
+    text-align: center;
+    color: #cdd6f4; /* Lighter text for 'Create an account' link */
+}
+
+.sign-up-link a {
+    color: #7f5af0; /* Purple text for link */
+    text-decoration: none;
+}
+
+.sign-up-link a:hover {
+    text-decoration: underline;
+}
