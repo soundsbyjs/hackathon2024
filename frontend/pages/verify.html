@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification - TrueMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="verify-wrapper">
+        <h2>Welcome Back!</h2>
+        <div id="result"></div> <!-- Display the result here -->
+        <input type="button" onclick="verifyUser()" value="Verify Me">
+    </div>
+
+    <script>
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        function verifyUser() {
+            const userName = getCookie('username');
+            if (!userName) {
+                document.getElementById('result').innerText = 'No user information found. Please log in again.';
+                return;
+            }
+            // Append the username from the cookie as a query parameter to the GET request
+            fetch(`http://nerdmusic.net:5555?username=${encodeURIComponent(userName)}`)
+                .then(response => response.json()) // Assuming the response is JSON
+                .then(data => {
+                    // Displaying the boolean result
+                    document.getElementById('result').innerText = data ? 'Verification successful.' : 'Verification failed.';
+                })
+                .catch(error => {
+                    console.error('Error during fetch:', error);
+                    document.getElementById('result').innerText = 'Failed to verify. Please try again.';
+                });
+        }
+    </script>
+</body>
+</html>
