@@ -3,9 +3,10 @@ import sys
 
 # Connect to MariaDB Platform
 try:
+    # password censored
     conn = mariadb.connect(
         user="juno",
-        password="1359",
+        # password="",
         host="localhost",
         database="P2PA"
     )
@@ -47,22 +48,18 @@ except mariadb.Error as e:
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask import jsonify
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@localhost/database_name'
+db = SQLAlchemy(app)
 
-
-# now get it to return an sql query
 @app.route('/')
 def index():
-    cur.execute("SELECT auth_token FROM users WHERE username = ?", ("new_user",))
-
-    # Fetch the results
-    columns = cur.fetchall()
-    return jsonify(column)
+    return 'Hello, World!'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5555)
+    if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
 
 
 # Close connection
